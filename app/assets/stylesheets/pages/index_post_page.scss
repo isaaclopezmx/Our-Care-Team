@@ -1,9 +1,18 @@
-.main-cont {
+.main-postcont {
   display: flex;
   flex-direction: row;
-  align-items: top;
-  vertical-align: top;
   height: 700px;
+}
+
+.c-con {
+  background-color: rgb(255, 255, 255);
+  max-width: 100%;
+  margin-left: 15px;
+  margin-right: 30px;
+  margin-top: 25px;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .post-container {
@@ -13,8 +22,10 @@
   margin-top: 10px;
   padding: 0%;
   height: auto;
-  width: 45vw;
+  width: 45rem;
   overflow-y: scroll;
+  background-color: #f3f3f3;
+
 
   p {
     font-size: 14px;
@@ -30,7 +41,9 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 45%;
+  width: 45rem;
+  padding-left: 45px;
+
 }
 
 .post {
@@ -42,16 +55,13 @@
 .post {
   display: flex;
   flex-direction: column;
-  align-items: flex-center;
   justify-content: center;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   height: 100%;
   width: 100%;
   border-radius: 10px;
   background-color: white;
-  margin-bottom: 3%;
-  padding: 3%;
-  padding-bottom: 0%;
+  margin-bottom: 2%;
 
   ul {
     list-style: none;
@@ -124,6 +134,7 @@
 .user-boxes-sticky {
   border-style: solid;
   border-color: #b792fc;
+  overflow-y: scroll;
 
 }
 

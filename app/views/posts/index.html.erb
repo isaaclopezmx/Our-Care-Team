@@ -1,4 +1,4 @@
-<div class="container d-con">
+<div class="container-fliuid c-con">
   <div class= "logo-row">
     <div class="col-4 user-row">
       <p id="date" class="date"></p>
@@ -14,7 +14,7 @@
       <img src="https://res.cloudinary.com/dqe5h0j32/image/upload/v1687795741/Care_Team_Logo_Updated_azhxg4.svg" class="logo" alt="">
     </div>
   </div>
-  <div class="main-cont">
+  <div class="main-postcont pt-4">
     <div class="post-container">
       <% @posts.each do |post| %>
         <div class="post">
@@ -87,35 +87,8 @@
       <% end %>
     </div>
     <div class="container-side">
-      <div class="user-boxes-sticky">
-        <div class="col-8 nofitication-text">
-          Team Members
-        </div>
-        <div class="user-boxes">
-          <% @users.each do |user| %>
-            <div class="user-box">
-              <div class="avatar">
-                <%= cl_image_tag user.avatar.key, class: "user-image"%>
-              </div>
-              <div class="name">
-                <%= user.first_name %>
-              </div>
-            </div>
-          <% end %>
-        </div>
-      </div>
-      <%# <div class="col-md-3 team-box">
-      <div class="row block-labels">
-        <div class="col-8 team-members-title">
-          Team Members
-        </div>
-        <div class="col-1">
-          <i class="fa-solid fa-people-group"></i>
-        </div>
-      </div>
-    </div> %>
-      <div class="block-post-create">
-        <div class="d-flex flex-column align-items-center">
+      <div class="block-post-create pb-3">
+        <div class="d-flex align-items-center">
           <h2 class="post-title">Posts</h2>
           <!--Button triger Modal-->
           <div class="add-post-button">
@@ -140,6 +113,27 @@
           </div>
         </div>
       </div>
+      <div class="user-boxes-sticky pt-3">
+        <div class="col-8 nofitication-text">
+          Team Members
+        </div>
+        <div class="user-boxes">
+          <% @users.each do |user| %>
+            <div class="user-box">
+              <div class="avatar">
+                <% if user && user.avatar && user.avatar.key %>
+                  <%= cl_image_tag user.avatar.key, class: "user-image" %>
+                <% else %>
+                  <!-- Handle the case where the user or avatar or key is nil -->
+                  <i class="fas fa-user-circle user-image-placeholder"></i>
+                <% end %>
+                <div class="name">
+                  <%= user.first_name %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>

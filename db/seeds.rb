@@ -8,38 +8,38 @@ Prescription.destroy_all
 Doctor.destroy_all
 
 admin = User.create!(email: "kim.estrada@gmail.com", role: "Admin", first_name: "Kimberly", last_name: "Estrada", phone_number: "212-555-1212", password: "password")
-admin_archivo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1687886533/User-Avatar-Kimberly_tg356x.png")
-admin.avatar.attach(io: admin_archivo, filename: "admin.png", content_type: "image/png")
+admin_archivo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1695350207/Our%20Care%20Team/l0yydvrqend3tolx8rxy.svg")
+admin.avatar.attach(io: admin_archivo, filename: "admin.svg", content_type: "image/svg")
 
 team = Team.create!(patient_first: "Susan", patient_last: "Estrada", user: admin)
 
 jen = User.create!(email: "test2@gmail.com", role: "Family", first_name: "Jen", last_name: "Alexander", phone_number: "212-555-1223", password: "password", team: team)
-jen_archivo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1687886533/User-Avatar-jennifer_lggcic.png")
-jen.avatar.attach(io: jen_archivo, filename: "jen.png", content_type: "image/png")
+jen_archivo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1695350208/Our%20Care%20Team/jghhsdhotkwx9xb1z0hj.svg")
+jen.avatar.attach(io: jen_archivo, filename: "jen.svg", content_type: "image/svg")
 
 kir = User.create!(email: "test3@gmail.com", role: "Family", first_name: "Kir", last_name: "Alexander", phone_number: "212-555-1234", password: "password", team: team)
-kir_archivo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1687886533/User-Avatar-kir_dhnow5.png")
-kir.avatar.attach(io: kir_archivo, filename: "kir.png", content_type: "image/png")
+kir_archivo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1695350207/Our%20Care%20Team/nddbgavebcnl6m94cvma.svg")
+kir.avatar.attach(io: kir_archivo, filename: "kir.svg", content_type: "image/svg")
 
 junior = User.create!(email: "test4@gmail.com", role: "Family", first_name: "Junior", last_name: "Alexander", phone_number: "212-555-1203", password: "password", team: team)
-junior_archivo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1687886533/User-Avatar-junior_ng0kej.png")
-junior.avatar.attach(io: junior_archivo, filename: "junior.png", content_type: "image/png")
+junior_archivo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1695350207/Our%20Care%20Team/qhrflgoewaqfqfjriox9.svg")
+junior.avatar.attach(io: junior_archivo, filename: "junior.svg", content_type: "image/svg")
 
 marth = User.create!(email: "test5@gmail.com", role: "Family", first_name: "Marth", last_name: "Alexander", phone_number: "212-555-1221", password: "password", team: team)
-marth_archivo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1687889866/User-Avatar-martha_qsj2rz.png")
-marth.avatar.attach(io: marth_archivo, filename: "marth.png", content_type: "image/png")
+marth_archivo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1695350207/Our%20Care%20Team/l0yydvrqend3tolx8rxy.svg")
+marth.avatar.attach(io: marth_archivo, filename: "marth.svg", content_type: "image/svg")
 
 ana = User.create!(email: "test6@gmail.com", role: "Caretaker", first_name: "Ana", last_name: "Lopez", phone_number: "212-555-1244", password: "password", team: team)
-ana_archivo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1687889317/User-Avatar-Ana_dfu8mh.png")
-ana.avatar.attach(io: ana_archivo, filename: "ana.png", content_type: "image/png")
+ana_archivo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1695350207/Our%20Care%20Team/rfriijhtfpuogx6gbnli.svg")
+ana.avatar.attach(io: ana_archivo, filename: "ana.svg", content_type: "image/svg")
 
 rose = User.create!(email: "test7@gmail.com", role: "Caretaker", first_name: "Rose", last_name: "Goodwin", phone_number: "212-555-1244", password: "password", team: team)
-rose_archivo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1687889866/User-Avatar-rose_dnel98.png")
-rose.avatar.attach(io: rose_archivo, filename: "rose.png", content_type: "image/png")
+rose_archivo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1695350207/Our%20Care%20Team/tojmna73gsoh2ttiepo1.svg")
+rose.avatar.attach(io: rose_archivo, filename: "rose.svg", content_type: "image/svg")
 
 daniel = User.create!(email: "daniel_one@gmail.com", role: "Family", first_name: "Daniel", last_name: "Enrriquez", phone_number: "55-3236-3480", password: "password", team: team)
-archivo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1687889140/User-Avatar-Alex_lxcgp0.png")
-daniel.avatar.attach(io: archivo, filename: "daniel.png", content_type: "image/png")
+archivo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1695350207/Our%20Care%20Team/nhg3e0bsz5irdcfwv7up.svg")
+daniel.avatar.attach(io: archivo, filename: "daniel.svg", content_type: "image/svg")
 
 # DAN POSTS SEEDS
 post1 = Post.create!(title: "Dad's birthday", content: "Look at this photo of Dad's cake", user: User.all.sample)
@@ -53,32 +53,32 @@ post3archivo = URI.open("https://as1.ftcdn.net/v2/jpg/05/40/99/66/1000_F_5409966
 post3.photos.attach(io: post3archivo, filename: "post3.jpg", content_type: "image/jpg")
 
 post4 = Post.create!(title: "New pet", content: "Introducing our adorable new family member", user: User.all.sample)
-post4archivo = URI.open("https://www.petplace.com/static/5844c0a4ce1d93e726ea04153375b217/98569/AdobeStock_1078613.jpg")
+post4archivo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1695351855/fatty-corgi-Zn5chZcnFRA-unsplash_1_vkfyvr.jpg")
 post4.photos.attach(io: post4archivo, filename: "post4.jpg", content_type: "image/jpg")
 
 #DAN DOCTOR
 bill = Doctor.create!(specialty: "Cardiologist", address: "800 Meadows Rd, Boca Raton, FL 33486, Estados Unidos", phone_number: "888-888-1212", user: admin, first_name: "Bill", last_name: "Jones", hospital: "Boca Raton Regional Hospital")
-bill_photo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1687988214/Doctor_male_one_uxxwyi.png")
+bill_photo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1695352227/doctor-avatar-five_bedqix.png")
 bill.avatar.attach(io: bill_photo, filename: "bill.jpg", content_type: "image/jpg")
 
 linda = Doctor.create!(specialty: "Neurologist", address: "5352 Linton Blvd, Delray Beach, FL 33484, Estados Unidos", phone_number: "888-555-2323", user: admin, first_name: "Linda", last_name: "Smith", hospital: "Delray Medical Center")
-linda_photo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1687988214/Doctor-Female-Two_zkfkqs.png")
+linda_photo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1695352227/doctor-avatar-five_bedqix.png")
 linda.avatar.attach(io: linda_photo, filename: "linda.png", content_type: "image/png")
 
 jhon = Doctor.create!(specialty: "General Practioner", address: "3000 Coral Hills Dr, Coral Springs, FL 33065, Estados Unidos", phone_number: "888-729-5656", user: admin, first_name: "John", last_name: "Karl", hospital: "Broward Health Coral Springs")
-jhon_photo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1687988214/Doctor-image-male-two_bsw2ee.png")
+jhon_photo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1695352227/doctor-avatar-five_bedqix.png")
 jhon.avatar.attach(io: jhon_photo, filename: "jhon.jpg", content_type: "image/jpg")
 
 miguel = Doctor.create!(specialty: "Dermatologist", address: "201 E Sample Rd, Deerfield Beach, FL 33064, Estados Unidos", phone_number: "888-888-1212", user: admin, first_name: "Kim", last_name: "Den", hospital: "Deerfield Medical Center")
-miguel_photo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1687988214/doctor-image-female_cfgnk2.png")
+miguel_photo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1695352227/doctor-avatar-five_bedqix.png")
 miguel.avatar.attach(io: miguel_photo, filename: "miguel.jpg", content_type: "image/jpg")
 
 salim = Doctor.create!(specialty: "Oncologist", address: "6401 N Federal Hwy, Fort Lauderdale, FL 33308, Estados Unidos", phone_number: "888-555-2323", user: admin, first_name: "Salim", last_name: "Smith", hospital: "Lauderdale Medical Center")
-salim_photo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1687989604/doctor-image-male-four_adc17q.png")
+salim_photo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1695352227/doctor-avatar-five_bedqix.png")
 salim.avatar.attach(io: salim_photo, filename: "salim.png", content_type: "image/png")
 
 dany = Doctor.create!(specialty: "Oncologist", address: "6401 N Federal Hwy, Fort Lauderdale, FL 33308, Estados Unidos", phone_number: "888-555-2323", user: admin, first_name: "Daniel", last_name: "Avila", hospital: "Lauderdale Medical Center")
-dany_photo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1688157289/doctor-avatar-five_gerzbg.png")
+dany_photo = URI.open("https://res.cloudinary.com/dqe5h0j32/image/upload/v1695352227/doctor-avatar-five_bedqix.png")
 dany.avatar.attach(io: dany_photo, filename: "dany.png", content_type: "image/png")
 
 #DAN PRESCRIPTION SEEDS

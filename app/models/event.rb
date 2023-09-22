@@ -3,20 +3,20 @@ class Event < ApplicationRecord
   belongs_to :user
   has_many :event_invited_users
   has_many :invited_users, through: :event_invited_users, source: :user # this is the user's invited events
-  has_many :medical_appointments
+  has_many :medical_appointments, dependent: :destroy
   has_many :doctors, through: :medical_appointments
   validates :event_type, inclusion: { in: EVENTTYPES }
   validates :start, :end, presence: true
 
   def owner
-    self.user
+    user
   end
 
   def start_time
-    self.start ##Where 'start' is a attribute of type 'Date' accessible through MyModel's relationship
+    start # #Where 'start' is a attribute of type 'Date' accessible through MyModel's relationship
   end
-  
+
   def end_time
-    self.end ##Where 'start' is a attribute of type 'Date' accessible through MyModel's relationship
+    self.end # #Where 'start' is a attribute of type 'Date' accessible through MyModel's relationship
   end
 end

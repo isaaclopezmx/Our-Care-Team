@@ -23,11 +23,9 @@
   </head>
   <body>
     <div class="main-body">
-      <div class="d-flex flex-row">
-        <%= render "shared/navbar" %>
-        <%= yield %>
-        <%= yield(:typedjs) %>
-      </div>
+      <%= render "shared/navbar" %>
+      <%= yield %>
+      <%= yield(:typedjs) %>
     </div>
     <%= render "shared/flashes" %>
   </body>
